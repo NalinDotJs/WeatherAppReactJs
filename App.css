@@ -1,0 +1,104 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white; /* Ensure text is visible on the video background */
+}
+
+.App video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.App-header {
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header h1 {
+  color: black;
+  font-family: fantasy;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.App-header input {
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: fantasy;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App-header input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+}
+
+.App-header button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: fantasy;
+  border: none;
+  background-color: #386fde;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.App-header button:hover {
+  background-color: #2851a3;
+  transform: scale(1.05);
+}
+
+.App-header div {
+  font-family: fantasy;
+  color: rgb(210, 178, 178);
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
